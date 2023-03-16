@@ -46,8 +46,8 @@ function App() {
       {/* <!-- About --> */}
       <section id="about" class="bg-gray-100 py-20">
         <div class="container mx-auto px-4">
-          <div class="flex flex-wrap">
-            <div class="w-full md:w-1/2">
+          <div class="flex flex-wrap justify-between items-center">
+            <div class="w-full h-full flex flex-col md:w-1/2">
               <h2 class="text-4xl font-bold text-gray-800 mb-8">About Me</h2>
               <p class="text-gray-700 leading-loose mb-12">
                 I am a full stack Java developer with experience in developing
@@ -57,12 +57,12 @@ function App() {
               </p>
               <a
                 href="#contact"
-                class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
+                class="bg-blue-500 w-[16%]  hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
               >
                 Contact Me
               </a>
             </div>
-            <div class="w-full md:w-1/2 flex justify-center items-center">
+            <div class="w-full md:w-1/2 lg:w-1/3 flex justify-center items-center">
               <img
                 src="https://source.unsplash.com/600x600/?developer"
                 alt="Developer"
