@@ -33,9 +33,11 @@
 }
 
 #about {
-  background-image: url("../assets/bg.svg");
 }
 .spring {
   /* filter: invert(1) sepia(100%) saturate(10000%) hue-rotate(-110deg); */
-  color: black;
+  /* color: black; */
+}
+.bgcover {
+  background-image: url("../assets/bg.svg");
 }

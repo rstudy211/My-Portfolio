@@ -1,20 +1,42 @@
 import React from "react";
 import "./portfolio2.css";
 import springIcon from "../assets/spring-boot.svg";
+import cover from "../assets/person-on-computer.png";
 
 function Portfolio2() {
+  function scrollToSection(sectionId) {
+    const section = document.querySelector(`#${sectionId}`);
+    section.scrollIntoView({ behavior: "smooth" });
+  }
+
+  const navLinks = document.querySelectorAll('nav a[href^="#"]');
+  //   console.log(navLinks);
+  navLinks.forEach((link) => {
+    console.log("step1", link);
+    link.addEventListener("click", function (event) {
+      event.preventDefault();
+      const sectionId = link.getAttribute("href").substring(1);
+      //   console.log(sectionId);
+      scrollToSection(sectionId);
+    });
+  });
+
   return (
     <body class="bg-gray-[#ffff] font-sans leading-normal tracking-normal">
       {/* <!-- Nav --> */}
-      <nav class="bg-gray-900 shadow py-6">
+      <nav class="bg-gray-900 shadow sticky top-0 py-6 z-20">
         <div class="container mx-auto px-6 md:px-0">
           <div class="md:flex justify-between items-center">
-            <div class="md:flex items-center">
+            <div class="md:flex  items-center">
               <a
-                href="#"
-                class="block pr-6 md:inline-block text-white font-bold"
+                href="#hero"
+                class="block pr-6 text-2xl md:inline-block text-white font-bold"
               >
-                Full-Stack Developer
+                PORT{" "}
+                <span className="bg-white text-gray-900 px-2 rounded">
+                  {" "}
+                  FOLIO
+                </span>
               </a>
               <div class="md:flex items-center">
                 <a
@@ -28,6 +50,18 @@ function Portfolio2() {
                   class="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-6"
                 >
                   Projects
+                </a>
+                <a
+                  href="#education"
+                  class="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-6"
+                >
+                  Education
+                </a>
+                <a
+                  href="#skills"
+                  class="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-6"
+                >
+                  Skills
                 </a>
                 <a
                   href="#contact"
@@ -57,12 +91,23 @@ function Portfolio2() {
       <div class="bg-gray-800" id="hero">
         <div class="container mx-auto py-12 px-6 md:py-24 md:flex md:justify-between md:items-center">
           <div class="md:w-1/2">
-            <h1 class="text-4xl font-bold text-white mb-2">
+            <h1 class="text-4xl  2xl:text-5xl font-bold text-white mb-2">
               I'm a Full-Stack Developer
             </h1>
-            <p class="text-gray-300 text-xl mb-4">
+            <p class="text-gray-300 text-xl 2xl:text-2xl mb-4">
               I build responsive, scalable, and performant web applications.
             </p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="fab fa-github"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-white">
+                <i class="fab fa-linkedin"></i>
+              </a>
+            </div>
             <a
               href="#contact"
               class="bg-white text-gray-900 py-2 px-4 rounded-lg shadow-lg font-bold"
@@ -72,7 +117,8 @@ function Portfolio2() {
           </div>
           <div class="md:w-1/2">
             <img
-              src="https://source.unsplash.com/900x600/?coding,programming"
+              src={cover}
+              //   src="https://source.unsplash.com/900x600/?coding,programming"
               //   src="https://drive.google.com/file/d/1tL0R6A8WeB8CGgBQQTGFz8MW42p7C-1s/view?usp=share_link"
               alt="Coding image"
               class="rounded-lg shadow-lg"
@@ -81,42 +127,44 @@ function Portfolio2() {
         </div>
       </div>
       {/* <!-- About --> */}
-      <div class="container mx-auto py-12 px-6" id="about">
-        <h2 class="text-3xl xl:text-6xl  font-bold text-gray-900 mb-4">
-          About Me
-        </h2>
-        <div class="md:flex">
-          <div class="md:flex items-center justify-center gap-22">
-            <img
-              //   src="https://source.unsplash.com/300x300/?person"
-              src="https://drive.google.com/uc?id=1PkwjBzsQoDYjTk4RG_7KD5QhjfeSE7hG"
-              alt="Profile picture"
-              class="rounded-lg max-w-full max-h-full sm:max-w-sm md:max-w-sm lg:max-w-sm shadow-lg "
-            />
-            <div class="md:w-1/2 md:pr-8 lg:w-1/2 text-justify relative flex justify-center  z-10">
-              <div className="w-2/3 bg-white rounded-md px-8 py-5">
-                <h2 class="text-3xl  font-bold text-gray-900 mb-4">
-                  Hi, I'm Rajeev Mohan
-                </h2>
-                <p class="text-gray-700 mb-4">
-                  I'm a Full-Stack Developer based in India. I specialize in
-                  building web applications using modern technologies such as
-                  React, Node.js, and MongoDB.
-                </p>
-                <p class="text-gray-700 mb-4">
-                  I have a passion for creating elegant and user-friendly
-                  interfaces that enhance the user experience. I'm constantly
-                  learning and staying up-to-date with the latest technologies
-                  to ensure that I'm delivering the best possible solutions to
-                  my clients.
-                </p>
+      <div class="container mx-auto pt-20  px-6" id="about">
+        <div className="bgcover shadow-md py-20 pb-20">
+          <h2 class="text-3xl xl:text-5xl 2xl:text-6xl  font-bold text-gray-900 mb-16">
+            About Me
+          </h2>
+          <div class="md:flex">
+            <div class="md:flex items-center justify-center gap-22">
+              <img
+                //   src="https://source.unsplash.com/300x300/?person"
+                src="https://drive.google.com/uc?id=1PkwjBzsQoDYjTk4RG_7KD5QhjfeSE7hG"
+                alt="Profile picture"
+                class="rounded-lg max-w-full max-h-full sm:max-w-sm md:max-w-sm lg:max-w-sm shadow-lg "
+              />
+              <div class="md:w-1/2 md:pr-8  lg:w-1/2 text-justify relative flex justify-center ">
+                <div className="w-2/3 shadow bg-white rounded-md px-8 py-5">
+                  <h2 class="text-3xl  font-bold text-gray-900 mb-4">
+                    Hi, I'm Rajeev Mohan
+                  </h2>
+                  <p class="text-gray-700 mb-4">
+                    I'm a Full-Stack Developer based in India. I specialize in
+                    building web applications using modern technologies such as
+                    React, Node.js, and MongoDB.
+                  </p>
+                  <p class="text-gray-700 mb-4">
+                    I have a passion for creating elegant and user-friendly
+                    interfaces that enhance the user experience. I'm constantly
+                    learning and staying up-to-date with the latest technologies
+                    to ensure that I'm delivering the best possible solutions to
+                    my clients.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div className="container mx-auto py-12 px-6">
-        <h3 class="text-2xl xl:text-3xl font-bold text-gray-900 my-8">
+      <div id="education" className="container mx-auto py-20 pb-5 px-6">
+        <h3 class="text-2xl xl:text-4xl  font-bold text-gray-900 my-8">
           My Education
         </h3>
         <div class="grid grid-cols-2 gap-4">
@@ -131,7 +179,10 @@ function Portfolio2() {
             <p class="text-gray-700">Graduated May 2015</p>
           </div>
         </div>
-        <h3 class="text-2xl xl:text-3xl font-bold text-gray-900 my-8">
+      </div>
+      {/* Skills */}
+      <div id="skills" className="container mx-auto py-20 px-6">
+        <h3 class="text-2xl xl:text-4xl font-bold text-gray-900 my-8">
           My Skills
         </h3>
         <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 xl:gap-20 ">
@@ -183,14 +234,11 @@ function Portfolio2() {
       </div>
       {/* <!-- Projects --> */}
       <div class="bg-gray-100 py-12 px-6" id="projects">
-        <div
-          class="container
-mx-auto"
-        >
-          <h2 class="text-3xl xl:text-6xl font-bold text-gray-900 mb-12">
+        <div class="container pt-16 pb-5 mx-auto">
+          <h2 class="text-3xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 mb-14">
             My Projects
           </h2>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+          <div class="grid md:grid-cols-2 pb-20 lg:grid-cols-3 gap-10">
             <div class="bg-white rounded-lg p-0 pt-5 px-5   shadow-lg overflow-hidden">
               {/* <img
                 // src="https://source.unsplash.com/500x300/?coding,programming"
@@ -281,7 +329,7 @@ mx-auto"
 
       {/* <!-- Contact --> */}
       <div class="container mx-auto py-12 px-6" id="contact">
-        <h2 class="text-3xl xl:text-6xl font-bold text-gray-900 mb-4">
+        <h2 class="text-3xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 mb-4">
           Get in Touch
         </h2>
         <div class="md:flex">
