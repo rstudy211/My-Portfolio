@@ -97,7 +97,7 @@ function Portfolio2() {
             <p class="text-gray-300 text-xl 2xl:text-2xl mb-4">
               I build responsive, scalable, and performant web applications.
             </p>
-            <div class="flex space-x-4">
+            <div class="flex space-x-4 mb-5 text-3xl">
               <a href="#" class="text-gray-400 hover:text-white">
                 <i class="fab fa-twitter"></i>
               </a>
