@@ -31,3 +31,11 @@
 #about a:hover {
   background-color: #4a5568;
 }
+
+#about {
+  background-image: url("../assets/bg.svg");
+}
+.spring {
+  /* filter: invert(1) sepia(100%) saturate(10000%) hue-rotate(-110deg); */
+  color: black;
+}

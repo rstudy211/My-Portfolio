@@ -1,4 +1,6 @@
 import React from "react";
+import "./portfolio2.css";
+import springIcon from "../assets/spring-boot.svg";
 
 function Portfolio2() {
   return (
@@ -52,7 +54,7 @@ function Portfolio2() {
       </nav>
 
       {/* <!-- Hero --> */}
-      <div class="bg-gray-800">
+      <div class="bg-gray-800" id="hero">
         <div class="container mx-auto py-12 px-6 md:py-24 md:flex md:justify-between md:items-center">
           <div class="md:w-1/2">
             <h1 class="text-4xl font-bold text-white mb-2">
@@ -71,6 +73,7 @@ function Portfolio2() {
           <div class="md:w-1/2">
             <img
               src="https://source.unsplash.com/900x600/?coding,programming"
+              //   src="https://drive.google.com/file/d/1tL0R6A8WeB8CGgBQQTGFz8MW42p7C-1s/view?usp=share_link"
               alt="Coding image"
               class="rounded-lg shadow-lg"
             />
@@ -79,34 +82,43 @@ function Portfolio2() {
       </div>
       {/* <!-- About --> */}
       <div class="container mx-auto py-12 px-6" id="about">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">About Me</h2>
+        <h2 class="text-3xl xl:text-6xl  font-bold text-gray-900 mb-4">
+          About Me
+        </h2>
         <div class="md:flex">
-          <div class="md:flex items-center justify-between">
+          <div class="md:flex items-center justify-center gap-22">
             <img
-              src="https://source.unsplash.com/300x300/?person"
+              //   src="https://source.unsplash.com/300x300/?person"
+              src="https://drive.google.com/uc?id=1PkwjBzsQoDYjTk4RG_7KD5QhjfeSE7hG"
               alt="Profile picture"
-              class="rounded-lg shadow-lg mb-4"
+              class="rounded-lg max-w-full max-h-full sm:max-w-sm md:max-w-sm lg:max-w-sm shadow-lg "
             />
-            <div class="md:w-1/2 md:pr-8 text-justify">
-              <h2 class="text-3xl font-bold text-gray-900 mb-4">
-                Hi, I'm John Doe
-              </h2>
-              <p class="text-gray-700 mb-4">
-                I'm a Full-Stack Developer based in San Francisco, CA. I
-                specialize in building web applications using modern
-                technologies such as React, Node.js, and MongoDB.
-              </p>
-              <p class="text-gray-700 mb-4">
-                I have a passion for creating elegant and user-friendly
-                interfaces that enhance the user experience. I'm constantly
-                learning and staying up-to-date with the latest technologies to
-                ensure that I'm delivering the best possible solutions to my
-                clients.
-              </p>
+            <div class="md:w-1/2 md:pr-8 lg:w-1/2 text-justify relative flex justify-center  z-10">
+              <div className="w-2/3 bg-white rounded-md px-8 py-5">
+                <h2 class="text-3xl  font-bold text-gray-900 mb-4">
+                  Hi, I'm Rajeev Mohan
+                </h2>
+                <p class="text-gray-700 mb-4">
+                  I'm a Full-Stack Developer based in India. I specialize in
+                  building web applications using modern technologies such as
+                  React, Node.js, and MongoDB.
+                </p>
+                <p class="text-gray-700 mb-4">
+                  I have a passion for creating elegant and user-friendly
+                  interfaces that enhance the user experience. I'm constantly
+                  learning and staying up-to-date with the latest technologies
+                  to ensure that I'm delivering the best possible solutions to
+                  my clients.
+                </p>
+              </div>
             </div>
           </div>
         </div>
-        <h3 class="text-2xl font-bold text-gray-900 my-8">My Education</h3>
+      </div>
+      <div className="container mx-auto py-12 px-6">
+        <h3 class="text-2xl xl:text-3xl font-bold text-gray-900 my-8">
+          My Education
+        </h3>
         <div class="grid grid-cols-2 gap-4">
           <div class="flex flex-col bg-gray-100 rounded-lg p-4">
             <h4 class="text-lg font-bold mb-2">B.S. Computer Science</h4>
@@ -119,8 +131,10 @@ function Portfolio2() {
             <p class="text-gray-700">Graduated May 2015</p>
           </div>
         </div>
-        <h3 class="text-2xl font-bold text-gray-900 my-8">My Skills</h3>
-        <div class="grid grid-cols-3 gap-4 ">
+        <h3 class="text-2xl xl:text-3xl font-bold text-gray-900 my-8">
+          My Skills
+        </h3>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-4 xl:gap-20 ">
           <div class="flex flex-col items-center bg-gray-100 rounded-lg p-4">
             <i class="fab fa-html5 fa-3x mb-2"></i>
             <p class="text-lg font-bold">HTML/CSS</p>
@@ -145,66 +159,110 @@ function Portfolio2() {
             <i class="fas fa-server fa-3x mb-2"></i>
             <p class="text-lg font-bold">Express.js</p>
           </div>
+          <div class="flex flex-col items-center bg-gray-100 rounded-lg p-4">
+            <i class="fab fa-java fa-3x mb-2"></i>
+            <p class="text-lg font-bold">Java</p>
+          </div>
+          <div class="flex flex-col items-center bg-gray-100 rounded-lg p-4">
+            <i class="fab fa-python fa-3x mb-2"></i>
+            <p class="text-lg font-bold">Python</p>
+          </div>
+          <div class="flex flex-col items-center bg-gray-100 rounded-lg p-4">
+            <i class="fas fa-code fa-3x mb-2"></i>
+            <p class="text-lg font-bold">C++</p>
+          </div>
+          <div class="flex flex-col items-center bg-gray-100 rounded-lg p-4">
+            <img
+              src={springIcon}
+              alt="Spring Boot"
+              class="w-16 h-16 spring mb-2"
+            />
+            <p class="text-lg font-bold">Spring Boot</p>
+          </div>
         </div>
       </div>
-
       {/* <!-- Projects --> */}
       <div class="bg-gray-100 py-12 px-6" id="projects">
         <div
           class="container
 mx-auto"
         >
-          <h2 class="text-3xl font-bold text-gray-900 mb-4">My Projects</h2>
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img
-                src="https://source.unsplash.com/500x300/?coding,programming"
+          <h2 class="text-3xl xl:text-6xl font-bold text-gray-900 mb-12">
+            My Projects
+          </h2>
+          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
+            <div class="bg-white rounded-lg p-0 pt-5 px-5   shadow-lg overflow-hidden">
+              {/* <img
+                // src="https://source.unsplash.com/500x300/?coding,programming"
+                src="https://raw.githubusercontent.com/rstudy211/Chat-App/blob/main/Screenshot%202023-02-22%20at%202.41.52%20PM.png"
                 alt="Project image"
                 class="w-full h-48 object-cover"
+              /> */}
+              <img
+                src="https://raw.githubusercontent.com/rstudy211/Chat-App/5d89e2bb82d3fa24079e19566630e1a668db1caa/Screenshot%202023-02-22%20at%202.41.52%20PM.png"
+                alt="Screenshot of Chat-App"
+                class="w-full h-[250px]  border-8 rounded-md border-slate-800 object-top"
               />
+
               <div class="p-4">
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Project 1</h3>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Chat-App</h3>
                 <p class="text-gray-700">
-                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis
-                  ac ipsum et nunc blandit condimentum eget vel orci.
+                  Chat-App is a React-based application that allows users to
+                  chat with each other in real-time. The app includes features
+                  such as the ability to create chat rooms, invite users to join
+                  a chat, and send text messages.
                 </p>
                 <a
-                  href="#"
+                  href="https://github.com/rstudy211/Chat-App"
                   class="block text-right text-gray-700 font-bold hover:text-gray-900"
                 >
-                  Read more →
+                  View Source Code →
                 </a>
               </div>
             </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img
+            <div class="bg-white rounded-lg p-0 pt-5 px-5 shadow-lg overflow-hidden">
+              {/* <img
                 src="https://source.unsplash.com/500x300/?coding,webdev"
                 alt="Project image"
                 class="w-full h-48 object-cover"
+              /> */}
+              <img
+                src="https://raw.githubusercontent.com/rstudy211/TodoApp/main/Screenshot%202022-09-24%20at%2011.58.52%20PM.png"
+                alt="TodoApp Screenshot"
+                class="w-full h-[250px]  border-8 rounded-lg border-slate-800 object-top"
               />
-              <div class="p-4">
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Project 2</h3>
+
+              <div class="p-4 flex flex-col justify-between">
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Todo-App</h3>
                 <p class="text-gray-700">
-                  Praesent eu purus eget nunc ullamcorper gravida quis non
-                  sapien. Integer luctus velit justo, non posuere mi mollis sit
-                  amet.
+                  A Node.js, Express, and MongoDB-based todo app is a web tool
+                  for managing daily tasks. Users can add, update, or delete
+                  tasks, which are stored in a MongoDB database, and use search
+                  and filter options to organize and find their tasks.
                 </p>
                 <a
-                  href="#"
+                  href="https://github.com/rstudy211/TodoApp"
                   class="block text-right text-gray-700 font-bold hover:text-gray-900"
                 >
-                  Read more →
+                  View Source Code →
                 </a>
               </div>
             </div>
-            <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img
-                src="https://source.unsplash.com/500x300/?coding,frontend"
+            <div class="bg-white rounded-lg p-0 pt-5 px-5 shadow-lg overflow-hidden">
+              {/* <img
+                // src="https://source.unsplash.com/500x300/?snakegame,frontend"
+                src="https://raw.githubusercontent.com/rstudy211/DigiCarda/blob/main/Screenshot%202023-03-20%20at%205.16.10%20PM.png"
                 alt="Project image"
                 class="w-full h-48 object-cover"
+              /> */}
+              <img
+                src="https://github.com/rstudy211/DigiCarda/raw/main/Screenshot%202023-03-20%20at%205.16.10%20PM.png"
+                alt="Project image"
+                class="w-full h-[250px]  border-8 rounded-lg border-slate-800 object-top"
               />
+
               <div class="p-4">
-                <h3 class="text-xl font-bold text-gray-900 mb-2">Project 3</h3>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">DigiCarda</h3>
                 <p class="text-gray-700">
                   Donec euismod felis non est hendrerit, in fermentum quam
                   hendrerit. Etiam tristique blandit velit.
@@ -223,7 +281,9 @@ mx-auto"
 
       {/* <!-- Contact --> */}
       <div class="container mx-auto py-12 px-6" id="contact">
-        <h2 class="text-3xl font-bold text-gray-900 mb-4">Get in Touch</h2>
+        <h2 class="text-3xl xl:text-6xl font-bold text-gray-900 mb-4">
+          Get in Touch
+        </h2>
         <div class="md:flex">
           <div class="md:w-1/3 md:pr-8">
             <p class="text-gray-700 mb-4">
