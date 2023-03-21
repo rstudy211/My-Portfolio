@@ -30,7 +30,7 @@ function Portfolio2() {
             <div class="md:flex  items-center">
               <a
                 href="#hero"
-                class="block pr-6 text-2xl md:inline-block text-white font-bold"
+                class="block pr-6 text-2xl md:inline-block text-white font-bold mr-3"
               >
                 PORT{" "}
                 <span className="bg-white text-gray-900 px-2 rounded">
@@ -45,12 +45,7 @@ function Portfolio2() {
                 >
                   About
                 </a>
-                <a
-                  href="#projects"
-                  class="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-6"
-                >
-                  Projects
-                </a>
+
                 <a
                   href="#education"
                   class="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-6"
@@ -62,6 +57,12 @@ function Portfolio2() {
                   class="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-6"
                 >
                   Skills
+                </a>
+                <a
+                  href="#projects"
+                  class="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-6"
+                >
+                  Projects
                 </a>
                 <a
                   href="#contact"
