@@ -2,6 +2,7 @@ import React from "react";
 import "./portfolio2.css";
 import springIcon from "../assets/spring-boot.svg";
 import cover from "../assets/person-on-computer.png";
+import resume from "../assets/Rajeev Latex.pdf";
 
 function Portfolio2() {
   function scrollToSection(sectionId) {
@@ -102,10 +103,16 @@ function Portfolio2() {
               <a href="#" class="text-gray-400 hover:text-white">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="#" class="text-gray-400 hover:text-white">
+              <a
+                href="https://github.com/rstudy211"
+                class="text-gray-400 hover:text-white"
+              >
                 <i class="fab fa-github"></i>
               </a>
-              <a href="#" class="text-gray-400 hover:text-white">
+              <a
+                href="https://www.linkedin.com/in/rajeev-mohan-031b801a2/"
+                class="text-gray-400 hover:text-white"
+              >
                 <i class="fab fa-linkedin"></i>
               </a>
             </div>
@@ -128,7 +135,7 @@ function Portfolio2() {
         </div>
       </div>
       {/* <!-- About --> */}
-      <div class="container mx-auto pt-20  px-6" id="about">
+      {/* <div class="container mx-auto pt-20  px-6" id="about">
         <div className="bgcover shadow-md py-20 pb-20">
           <h2 class="text-3xl xl:text-5xl 2xl:text-6xl  font-bold text-gray-900 mb-16">
             About Me
@@ -163,16 +170,65 @@ function Portfolio2() {
             </div>
           </div>
         </div>
+      </div> */}
+      <div class="container mx-auto pt-20  px-6" id="about">
+        <div className="bgcover shadow-md py-20 pb-20">
+          <h2 class="text-3xl xl:text-5xl 2xl:text-6xl  font-bold text-gray-900 mb-16">
+            About Me
+          </h2>
+          <div class="md:flex">
+            <div class="md:flex items-center justify-center gap-22">
+              <img
+                //   src="https://source.unsplash.com/300x300/?person"
+                src="https://drive.google.com/uc?id=1PkwjBzsQoDYjTk4RG_7KD5QhjfeSE7hG"
+                alt="Profile picture"
+                class="rounded-lg max-w-full max-h-full sm:max-w-sm md:max-w-sm lg:max-w-sm shadow-lg "
+              />
+              <div class="md:w-1/2 md:pr-8  lg:w-1/2 text-justify relative flex justify-center ">
+                <div className="w-2/3 shadow bg-white rounded-md px-8 py-5">
+                  <h2 class="text-3xl  font-bold text-gray-900 mb-4">
+                    Hi, I'm Rajeev Mohan
+                  </h2>
+                  <p class="text-gray-700 mb-4">
+                    I'm a Full-Stack Developer based in India. I specialize in
+                    building web applications using modern technologies such as
+                    React, Node.js, and MongoDB.
+                  </p>
+                  <p class="text-gray-700 mb-4">
+                    I have a passion for creating elegant and user-friendly
+                    interfaces that enhance the user experience. I'm constantly
+                    learning and staying up-to-date with the latest technologies
+                    to ensure that I'm delivering the best possible solutions to
+                    my clients.
+                  </p>
+                  <div class="text-center mt-8">
+                    <a
+                      href={resume}
+                      download
+                      class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+                    >
+                      Download Resume
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
+
       <div id="education" className="container mx-auto py-20 pb-5 px-6">
         <h3 class="text-2xl xl:text-4xl  font-bold text-gray-900 my-8">
           My Education
         </h3>
         <div class="grid grid-cols-2 gap-4">
           <div class="flex flex-col bg-gray-100 rounded-lg p-4">
-            <h4 class="text-lg font-bold mb-2">B.S. Computer Science</h4>
-            <p class="text-gray-700 mb-1">University of California, Berkeley</p>
-            <p class="text-gray-700">Graduated May 2015</p>
+            <h4 class="text-lg font-bold mb-2">B.Tech. Computer Science</h4>
+            <p class="text-gray-700 mb-1">
+              Government Engineering College Ajmer
+            </p>
+            <p class="text-gray-700">August 2018 - May 2022</p>
+            <p class="text-gray-700">Affilliated to BTU Bikaner</p>
           </div>
           <div class="flex flex-col bg-gray-100 rounded-lg p-4">
             <h4 class="text-lg font-bold mb-2">B.S. Computer Science</h4>
@@ -240,7 +296,7 @@ function Portfolio2() {
             My Projects
           </h2>
           <div class="grid md:grid-cols-2 pb-20 lg:grid-cols-3 gap-10">
-            <div class="bg-white rounded-lg p-0 pt-5 px-5   shadow-lg overflow-hidden">
+            <div class="bg-white rounded-lg p-0 pt-5 px-5 order-3   shadow-lg overflow-hidden">
               {/* <img
                 // src="https://source.unsplash.com/500x300/?coding,programming"
                 src="https://raw.githubusercontent.com/rstudy211/Chat-App/blob/main/Screenshot%202023-02-22%20at%202.41.52%20PM.png"
@@ -250,26 +306,27 @@ function Portfolio2() {
               <img
                 src="https://raw.githubusercontent.com/rstudy211/Chat-App/5d89e2bb82d3fa24079e19566630e1a668db1caa/Screenshot%202023-02-22%20at%202.41.52%20PM.png"
                 alt="Screenshot of Chat-App"
-                class="w-full h-[250px]  border-8 rounded-md border-slate-800 object-top"
+                class="w-full h-[250px] bg-black border-8 rounded-md border-slate-800 object-top"
               />
 
               <div class="p-4">
                 <h3 class="text-xl font-bold text-gray-900 mb-2">Chat-App</h3>
-                <p class="text-gray-700">
+                <p class="text-gray-700  line-clamp-3">
                   Chat-App is a React-based application that allows users to
                   chat with each other in real-time. The app includes features
                   such as the ability to create chat rooms, invite users to join
                   a chat, and send text messages.
                 </p>
+
                 <a
                   href="https://github.com/rstudy211/Chat-App"
-                  class="block text-right text-gray-700 font-bold hover:text-gray-900"
+                  class="block mt-10 text-right text-gray-700 font-bold hover:text-gray-900"
                 >
                   View Source Code →
                 </a>
               </div>
             </div>
-            <div class="bg-white rounded-lg p-0 pt-5 px-5 shadow-lg overflow-hidden">
+            <div class="bg-white rounded-lg p-0 pt-5 px-5 order-2 shadow-lg overflow-hidden">
               {/* <img
                 src="https://source.unsplash.com/500x300/?coding,webdev"
                 alt="Project image"
@@ -283,7 +340,7 @@ function Portfolio2() {
 
               <div class="p-4 flex flex-col justify-between">
                 <h3 class="text-xl font-bold text-gray-900 mb-2">Todo-App</h3>
-                <p class="text-gray-700">
+                <p class="text-gray-700  line-clamp-3">
                   A Node.js, Express, and MongoDB-based todo app is a web tool
                   for managing daily tasks. Users can add, update, or delete
                   tasks, which are stored in a MongoDB database, and use search
@@ -291,13 +348,13 @@ function Portfolio2() {
                 </p>
                 <a
                   href="https://github.com/rstudy211/TodoApp"
-                  class="block text-right text-gray-700 font-bold hover:text-gray-900"
+                  class="block mt-10 text-right text-gray-700 font-bold hover:text-gray-900"
                 >
                   View Source Code →
                 </a>
               </div>
             </div>
-            <div class="bg-white rounded-lg p-0 pt-5 px-5 shadow-lg overflow-hidden">
+            <div class="bg-white rounded-lg p-0 pt-5 px-5 order-1 shadow-lg overflow-hidden">
               {/* <img
                 // src="https://source.unsplash.com/500x300/?snakegame,frontend"
                 src="https://raw.githubusercontent.com/rstudy211/DigiCarda/blob/main/Screenshot%202023-03-20%20at%205.16.10%20PM.png"
@@ -312,15 +369,15 @@ function Portfolio2() {
 
               <div class="p-4">
                 <h3 class="text-xl font-bold text-gray-900 mb-2">DigiCarda</h3>
-                <p class="text-gray-700">
+                <p class="text-gray-700 line-clamp-3">
                   Donec euismod felis non est hendrerit, in fermentum quam
                   hendrerit. Etiam tristique blandit velit.
                 </p>
                 <a
                   href="#"
-                  class="block text-right text-gray-700 font-bold hover:text-gray-900"
+                  class="block mt-10 text-right text-gray-700 font-bold hover:text-gray-900"
                 >
-                  Read more →
+                  View source code →
                 </a>
               </div>
             </div>
@@ -378,10 +435,16 @@ function Portfolio2() {
               <a href="#" class="mx-2 text-gray-100 hover:text-gray-400">
                 <i class="fab fa-twitter"></i>
               </a>
-              <a href="#" class="mx-2 text-gray-100 hover:text-gray-400">
+              <a
+                href="https://github.com/rstudy211"
+                class="mx-2 text-gray-100 hover:text-gray-400"
+              >
                 <i class="fab fa-github"></i>
               </a>
-              <a href="#" class="mx-2 text-gray-100 hover:text-gray-400">
+              <a
+                href="https://www.linkedin.com/in/rajeev-mohan-031b801a2/"
+                class="mx-2 text-gray-100 hover:text-gray-400"
+              >
                 <i class="fab fa-linkedin"></i>
               </a>
             </div>
@@ -392,10 +455,10 @@ function Portfolio2() {
             </div>
             <div class="flex items-center">
               <a href="#" class="text-gray-400 hover:text-gray-100 mx-4">
-                Privacy Policy
+                rstudy211@gmail.com
               </a>
               <a href="#" class="text-gray-400 hover:text-gray-100 mx-4">
-                Terms of Service
+                +91 9462748219
               </a>
             </div>
           </div>
