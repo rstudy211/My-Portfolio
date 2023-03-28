@@ -16,7 +16,7 @@ function Portfolio2() {
     console.log("step1", link);
     link.addEventListener("click", function (event) {
       event.preventDefault();
-      const sectionId = link.getAttribute("href").substring(1);
+      const sectionId = link.id;
       //   console.log(sectionId);
       scrollToSection(sectionId);
     });
@@ -31,6 +31,7 @@ function Portfolio2() {
             <div class="md:flex  items-center">
               <a
                 href="#hero"
+                id="hero"
                 class="block pr-6 text-2xl md:inline-block text-white font-bold mr-3"
               >
                 PORT{" "}
