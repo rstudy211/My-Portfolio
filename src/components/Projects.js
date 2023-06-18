@@ -9,16 +9,10 @@ function Projects() {
         </h2>
         <div class="grid md:grid-cols-2 pb-20 lg:grid-cols-3 gap-10">
           <div class="bg-white rounded-lg p-0 pt-5 px-5 order-3   shadow-lg overflow-hidden">
-            {/* <img
-                // src="https://source.unsplash.com/500x300/?coding,programming"
-                src="https://raw.githubusercontent.com/rstudy211/Chat-App/blob/main/Screenshot%202023-02-22%20at%202.41.52%20PM.png"
-                alt="Project image"
-                class="w-full h-48 object-cover"
-              /> */}
             <img
               src="https://raw.githubusercontent.com/rstudy211/Chat-App/5d89e2bb82d3fa24079e19566630e1a668db1caa/Screenshot%202023-02-22%20at%202.41.52%20PM.png"
               alt="Screenshot of Chat-App"
-              class="w-full h-[250px] bg-black border-8 rounded-md border-slate-800 object-top"
+              class="w-full h-[320px] md:h-[245px] bg-black border-8 rounded-md border-slate-800 object-top"
             />
 
             <div class="p-4">
@@ -49,7 +43,7 @@ function Projects() {
               src="https://raw.githubusercontent.com/rstudy211/Blog-App/main/Frontend(React)/src/Images/Screenshot%202023-04-07%20at%2010.09.49%20PM.png
                 "
               alt="Screenshot of Chat-App"
-              class="w-full h-[250px] bg-black border-8 rounded-md border-slate-800 object-top"
+              class="w-full h-[320px] md:h-[245px] bg-black border-8 rounded-md border-slate-800 object-top"
             />
 
             <div class="p-4">
@@ -70,15 +64,10 @@ function Projects() {
             </div>
           </div>
           <div class="bg-white rounded-lg p-0 pt-5 px-5 order-2 shadow-lg overflow-hidden">
-            {/* <img
-                src="https://source.unsplash.com/500x300/?coding,webdev"
-                alt="Project image"
-                class="w-full h-48 object-cover"
-              /> */}
             <img
               src="https://raw.githubusercontent.com/rstudy211/TodoApp/main/Screenshot%202022-09-24%20at%2011.58.52%20PM.png"
               alt="TodoApp Screenshot"
-              class="w-full h-[250px]  border-8 rounded-lg border-slate-800 object-top"
+              class="w-full h-[320px] md:h-[245px]  border-8 rounded-lg border-slate-800 object-top"
             />
 
             <div class="p-4 flex flex-col justify-between">
@@ -98,16 +87,10 @@ function Projects() {
             </div>
           </div>
           <div class="bg-white rounded-lg p-0 pt-5 px-5 order-1 shadow-lg overflow-hidden">
-            {/* <img
-                // src="https://source.unsplash.com/500x300/?snakegame,frontend"
-                src="https://raw.githubusercontent.com/rstudy211/DigiCarda/blob/main/Screenshot%202023-03-20%20at%205.16.10%20PM.png"
-                alt="Project image"
-                class="w-full h-48 object-cover"
-              /> */}
             <img
               src="https://github.com/rstudy211/DigiCarda/raw/main/Screenshot%202023-03-20%20at%205.16.10%20PM.png"
               alt="Project image"
-              class="w-full h-[250px]  border-8 rounded-lg border-slate-800 object-top"
+              class="w-full h-[320px] md:h-[245px]  border-8 rounded-lg border-slate-800 object-top"
             />
 
             <div class="p-4">

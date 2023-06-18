@@ -27,7 +27,7 @@ function Portfolio2() {
   });
 
   return (
-    <body class="bg-gray-[#ffff] font-sans leading-normal tracking-normal">
+    <body class="bg-gray-[#ffff] text-center md:text-left font-sans leading-normal tracking-normal">
       {/* <!-- Nav --> */}
       <Navbar />
       {/* <!-- Hero --> */}
@@ -49,9 +49,11 @@ function Portfolio2() {
             <p class="text-gray-700">Affilliated to BTU Bikaner</p>
           </div>
           <div class="flex flex-col bg-gray-100 rounded-lg p-4">
-            <h4 class="text-lg font-bold mb-2">B.S. Computer Science</h4>
-            <p class="text-gray-700 mb-1">University of California, Berkeley</p>
-            <p class="text-gray-700">Graduated May 2015</p>
+            <h4 class="text-lg font-bold mb-2">Math Science</h4>
+            <p class="text-gray-700 mb-1">
+              Government Sr Sec School Bargaow, KOTA
+            </p>
+            <p class="text-gray-700">Graduated May 2018</p>
           </div>
         </div>
       </div>
