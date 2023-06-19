@@ -97,11 +97,13 @@ function Navbar() {
               </span>
             </a>
             <div
-              class={`${showNavbar ? "block" : "hidden"} md:flex items-center`}
+              class={`${
+                showNavbar ? "block" : "hidden"
+              } md:flex items-center 2xl:font-bold tracking-wider`}
             >
               <a
                 href="#about"
-                class="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-6"
+                class="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-gray-50 mr-6"
               >
                 About
               </a>

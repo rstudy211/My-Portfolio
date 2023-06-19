@@ -64,13 +64,26 @@ function About() {
     //     </div>
     //   </div>
     // </div>
-    <div className="w-full md:container mx-auto md:pt-20 px-6" id="about">
+    <div
+      className="w-full md:container mx-auto md:pt-20 px-6"
+      id="about"
+      data-aos="fade-up"
+      data-aos-offset="400"
+    >
       <div className={`shadow-md py-20 pb-20 ${isMobile ? "" : "bgcover"}`}>
-        <h2 className="text-3xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 mb-16 text-center">
+        <h2
+          className="text-3xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 mb-16 text-center"
+          data-aos="fade-up"
+          data-aos-delay="400"
+        >
           About Me
         </h2>
         <div className="md:flex items-center justify-center gap-10">
           <img
+            data-aos="fade-zoom-in"
+            data-aos-offset="200"
+            data-aos-easing="ease-in-sine"
+            data-aos-duration="600"
             src={profilePicture}
             alt="Profile picture"
             className="rounded-lg max-w-full h-auto md:max-h-full sm:max-w-sm md:max-w-sm lg:max-w-sm shadow-lg"

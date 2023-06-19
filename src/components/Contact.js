@@ -38,18 +38,27 @@ function Contact() {
     //         </div>
     //       </div>
     //     </div>
-    <div class="container mx-auto py-12 px-6" id="contact">
+    <div
+      class="container mx-auto py-12 px-6"
+      id="contact"
+      data-aos="fade-up"
+      data-aos-offset="300"
+    >
       <h2 class="text-3xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 mb-4">
         Get in Touch
       </h2>
       <div class="md:flex">
         <div class="md:w-1/3 md:pr-8">
-          <p class="text-gray-700 mb-4">
+          <p
+            class="text-gray-700 mb-4"
+            data-aos="fade-right"
+            data-aos-delay="400"
+          >
             Want to work together or have a question? Send me a message and I'll
             get back to you as soon as possible.
           </p>
         </div>
-        <div class="md:w-2/3">
+        <div class="md:w-2/3" data-aos="fade-left" data-aos-delay="400">
           <form
             class="flex-col text-left items-center"
             action="#"
