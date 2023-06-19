@@ -50,26 +50,26 @@ const projects = [
 function Projects() {
   return (
     <div
-      class="bg-gray-100 py-12 px-6"
+      class="bg-gray-100 py-12 px-1 md:px-6"
       id="projects"
       data-aos="fade-up"
       data-aos-offset="300"
     >
-      <div class="container pt-16 pb-5 mx-auto">
+      <div class="container pt-16 px-3 pb-5 mx-auto">
         <h2 class="text-3xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 mb-14">
           My Projects
         </h2>
-        <div class="grid md:grid-cols-2 pb-20 lg:grid-cols-3 gap-10">
+        <div class="grid md:grid-cols-2 pb-20 lg:grid-cols-3 gap-14 md:gap-10">
           {projects.map((project, index) => (
             <div
               data-aos="fade-up"
               data-aos-delay={100 * index}
-              class={`bg-white rounded-lg p-0 pt-5 px-5 order-${project.order}   shadow-lg overflow-hidden`}
+              class={`bg-white rounded-lg  md:pt-5  md:px-5 order-${project.order}   shadow-lg overflow-hidden`}
             >
               <img
                 src={project.imgSrc}
                 alt="Screenshot of Chat-App"
-                class="w-full h-[320px] md:h-[245px] bg-black border-8 rounded-md border-slate-800 object-top"
+                class="w-full   h-[200px] sm:h-[350px] md:h-[245px] bg-black  border-8 rounded-md border-slate-800 object-top"
               />
 
               <div class="p-4">
