@@ -11,6 +11,18 @@ const projects = [
     the ability to create chat rooms, invite users to join a chat,
     and send text messages.`,
     gitLink: "https://github.com/rstudy211/Chat-App",
+    techStack:[ 
+      // { name: "HTML/CSS", icon: "fab fa-html5 fa-3x" },
+    // { name: "JavaScript", icon: "fab fa-js fa-3x" },
+    { name: "React.js", icon: "fab fa-react fa-3x" },
+    // { name: "Node.js", icon: "fab fa-node fa-3x" },
+    // { name: "Express.js", icon: "fas fa-server fa-3x" },
+    { name: "Java", icon: "fab fa-java fa-3x" },
+    { name: "MongoDB", icon: "fas fa-database fa-3x" },
+
+    // { name: "Python", icon: "fab fa-python fa-3x" },
+    // { name: "C++", icon: "fas fa-code fa-3x" },
+    ]
   },
   {
     order: 1,
@@ -23,6 +35,15 @@ const projects = [
     account management, post search, filtering and sorting.
   `,
     gitLink: "https://github.com/rstudy211/Blog-App",
+    techStack:[  
+        { name: "React.js", icon: "fab fa-react fa-3x" },
+    { name: "Java", icon: "fab fa-java fa-3x" },
+    { name: "Mysql", icon: "fas fa-database fa-3x" },
+
+
+  ]
+
+
   },
   {
     order: 2,
@@ -34,7 +55,16 @@ const projects = [
     which are stored in a MongoDB database, and use search and
     filter options to organize and find their tasks.
   `,
-    gitLink: "https://github.com/rstudy211/Todo-App",
+    gitLink: "https://github.com/rstudy211/TodoApp",
+    techStack:[   
+       { name: "Node.js", icon: "fab fa-node fa-3x" },
+    { name: "Express.js", icon: "fas fa-server fa-3x" },
+    { name: "Mysql", icon: "fas fa-database fa-3x" },
+
+
+  ]
+
+
   },
   {
     order: 0,
@@ -45,6 +75,12 @@ const projects = [
     hendrerit. Etiam tristique blandit velit.
   `,
     gitLink: "https://github.com/rstudy211/DigiCarda",
+    techStack:[        { name: "React.js", icon: "fab fa-react fa-3x" },
+    { name: "Mysql", icon: "fas fa-database fa-3x" },
+
+  ]
+
+
   },
 ];
 function Projects() {
@@ -64,13 +100,30 @@ function Projects() {
             <div
               data-aos="fade-up"
               data-aos-delay={100 * index}
-              class={`bg-white rounded-lg  md:pt-5  md:px-5 order-${project.order}   shadow-lg overflow-hidden`}
+              class={`bg-white  rounded-lg  md:pt-5  md:px-5 order-${project.order}   shadow-lg overflow-hidden`}
             >
+              <div class="relative group/item border-8 rounded-md overflow-hidden  border-slate-800 object-top bg-black  ">
               <img
                 src={project.imgSrc}
                 alt="Screenshot of Chat-App"
-                class="w-full   h-[200px] sm:h-[350px] md:h-[245px] bg-black  border-8 rounded-md border-slate-800 object-top"
+                class="w-full group-hover/item:opacity-30 duration-200 h-[200px] sm:h-[350px] md:h-[240px] group-hover/item:scale-105    "
               />
+              <div class="group/edit absolute inset-0 delay-100 invisible group-hover/item:visible text-white">
+                <p class=" text-4xl py-5  text-center">Tech Stack</p>
+                <div class="grid grid-cols-3 justify-center text-center  gap-y-4  mt-5">
+                  {project.techStack.map((tech,key)=>(
+                    <div className="flex flex-col">
+                    <p className={tech.icon + "border text-6xl"}>
+                    
+                    </p>
+                    <p className="text-sm ">{tech.name}</p>
+                    </div>
+                  ))}
+                
+
+                </div>
+              </div>
+              </div>
 
               <div class="p-4">
                 <h3 class="text-xl font-bold text-gray-900 mb-2">
@@ -80,15 +133,18 @@ function Projects() {
 
                 <a
                   href={project.gitLink}
-                  class="block mt-10 text-right text-gray-700 font-bold hover:text-gray-900"
+                  class="block mt-10 text-right text-gray-400 transition-all duration-500 font-bold hover:text-gray-900"
                 >
                   View Source Code →
                 </a>
               </div>
             </div>
+          
           ))}
         </div>
       </div>
+
+      
     </div>
   );
 }

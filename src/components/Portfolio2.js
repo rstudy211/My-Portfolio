@@ -27,7 +27,7 @@ function Portfolio2() {
   });
 
   return (
-    <body class="bg-gray-[#ffff] text-center md:text-left font-sans leading-normal tracking-normal">
+    <body class="bg-gray-[#ffff]   text-center md:text-left font-sans leading-normal tracking-normal">
       {/* <!-- Nav --> */}
       <Navbar />
       {/* <!-- Hero --> */}

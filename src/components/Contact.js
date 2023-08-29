@@ -39,7 +39,7 @@ function Contact() {
     //       </div>
     //     </div>
     <div
-      class="container mx-auto py-12 px-6"
+      class="container overflow-x-hidden mx-auto py-12 px-6"
       id="contact"
       data-aos="fade-up"
       data-aos-offset="300"

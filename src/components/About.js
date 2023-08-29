@@ -86,7 +86,7 @@ function About() {
             data-aos-duration="600"
             src={profilePicture}
             alt="Profile picture"
-            className="rounded-lg max-w-full h-auto md:max-h-full sm:max-w-sm md:max-w-sm lg:max-w-sm shadow-lg"
+            className="rounded-lg max-w-full h-auto lg:max-h-full sm:max-w-sm md:max-w-sm lg:max-w-sm shadow-lg"
           />
           <div className="md:w-1/2 md:pr-8 lg:w-1/2">
             <div className="bg-white rounded-md shadow p-8">

@@ -81,61 +81,73 @@ function Navbar() {
   };
 
   return (
-    <nav class="bg-gray-900 shadow sticky text-left border-b border-gray-800 top-0 py-6 z-20">
+    <nav class="bg-slate-900 shadow sticky text-left border-b border-gray-800 top-0 py-4 z-20">
       <div class="container mx-auto px-6 md:px-0">
-        <div class="flex flex-row md:flex justify-between items-center">
-          <div class="md:flex  items-center">
-            <a
+        <div class="flex relative flex-row md:flex justify-between items-center">
+          <div class=" md:flex w-full justify-between  items-center">
+            {/* <a
               href="#hero"
               id="hero"
-              class="block pr-6 text-2xl md:inline-block text-white font-bold mr-3"
+              class="block hidden pr-6 text-2xl md:inline-block text-white font-bold mr-3"
             >
               PORT{" "}
               <span className="bg-white text-gray-900 px-2 rounded">
                 {" "}
                 FOLIO
               </span>
-            </a>
+            </a> */}
+          <p class="text-3xl mr-5 text-gray-50 font-Leckerli tracking-wider ">Rajeev<span className="text-blue-600">.</span></p>
+
             <div
+            
               class={`${
                 showNavbar ? "block" : "hidden"
-              } md:flex items-center 2xl:font-bold tracking-wider`}
+
+              } md:flex items-center 2xl:font-bold tracking-wider lg:gap-6 `}
             >
               <a
                 href="#about"
-                class="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-gray-50 mr-6"
+                class="block mt-4 md:inline-block md:mt-0 text-gray-300 focus:outline-none active:text-violet-500 focus:ring transition-all duration-200 hover:bg-slate-700 py-1 px-4 rounded-full hover:text-gray-50 "
               >
                 About
               </a>
+              
 
               <a
                 href="#education"
-                class="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-6"
+                class="block mt-4 md:inline-block md:mt-0 text-gray-300 focus:outline-none active:text-violet-500 focus:ring transition-all duration-200 hover:bg-slate-700 py-1 px-4 rounded-full hover:text-white "
               >
                 Education
               </a>
               <a
                 href="#skills"
-                class="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-6"
+                class="block mt-4 md:inline-block md:mt-0 text-gray-300 focus:outline-none active:text-violet-500 focus:ring transition-all duration-200 hover:bg-slate-700 py-1 px-4 rounded-full hover:text-white "
               >
                 Skills
               </a>
               <a
                 href="#projects"
-                class="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white mr-6"
+                class="block mt-4 md:inline-block md:mt-0 text-gray-300  active:bg-blue-400 focus:ring focus:ring-violet-500 transition-all duration-200 hover:bg-slate-700 py-1 px-4 rounded-full hover:text-white "
               >
                 Projects
               </a>
-              <a
+              
+              
+            </div>
+            <a
                 href="#contact"
-                class="block mt-4 md:inline-block md:mt-0 text-gray-300 hover:text-white"
-              >
+
+                class={`${
+                showNavbar ? "block" : "hidden"
+
+              } mt-4 rounded-full ring-1 px-3 py-1 font-bold text-md hover:bg-blue-950 bg-blue-700  ring-blue-600 md:inline-block md:mt-0 text-gray-300 text-center hover:text-white`}
+              > 
                 Contact
               </a>
-            </div>
           </div>
+
           <button
-            className="md:hidden focus:outline-none"
+            className="md:hidden absolute top-0 right-8 focus:outline-none"
             onClick={toggleNavbar}
           >
             <i

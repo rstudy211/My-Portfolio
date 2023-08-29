@@ -120,7 +120,7 @@ const SkillList = () => {
     //     </div>
     //   )}
     // </div>
-    <div id="skills" className="container mx-auto py-20 px-6">
+    <div id="skills" className="container  mx-auto py-20 px-6">
       <h3 className="text-2xl xl:text-4xl font-bold text-gray-900 my-8">
         My Skills
       </h3>
