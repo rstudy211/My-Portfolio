@@ -81,7 +81,7 @@ function Navbar() {
   };
 
   return (
-    <nav class="bg-slate-900 shadow sticky text-left border-b border-gray-800 top-0 py-4 z-20">
+    <nav class="bg-hero shadow sticky text-left  top-0 py-4 z-20">
       <div class="container mx-auto px-6 md:px-0">
         <div class="flex relative flex-row md:flex justify-between items-center">
           <div class=" md:flex w-full justify-between  items-center">
@@ -140,7 +140,8 @@ function Navbar() {
                 class={`${
                 showNavbar ? "block" : "hidden"
 
-              } mt-4 rounded-full ring-1 px-3 py-1 font-bold text-md hover:bg-blue-950 bg-blue-700  ring-blue-600 md:inline-block md:mt-0 text-gray-300 text-center hover:text-white`}
+              } mt-4 rounded-full ring-1 px-3 py-1 font-bold text-md focus-btn md:inline-block md:mt-0 text-center hover:text-slate-50`}
+              
               > 
                 Contact
               </a>

@@ -27,7 +27,7 @@ function Portfolio2() {
   });
 
   return (
-    <body class="bg-gray-[#ffff]   text-center md:text-left font-sans leading-normal tracking-normal">
+    <body class=" bg-hero  text-center md:text-left font-sans leading-normal tracking-normal">
       {/* <!-- Nav --> */}
       <Navbar />
       {/* <!-- Hero --> */}
@@ -41,32 +41,32 @@ function Portfolio2() {
         data-aos="fade-down"
         data-aos-offset="400"
       >
-        <h3 class="text-2xl xl:text-4xl  font-bold text-gray-900 my-8">
+        <h3 class="text-2xl xl:text-4xl  font-bold text-gray-300 my-8">
           My Education
         </h3>
         <div class="grid grid-cols-2 gap-4">
           <div
-            class="flex flex-col bg-gray-100 rounded-lg p-4"
+            class="flex flex-col bg-slab rounded-lg p-4"
             data-aos="fade-right"
             data-aos-delay="500"
           >
             <h4 class="text-lg font-bold mb-2">B.Tech. Computer Science</h4>
-            <p class="text-gray-700 mb-1">
+            <p class="text-indigo-500 mb-1">
               Government Engineering College Ajmer
             </p>
-            <p class="text-gray-700">August 2018 - May 2022</p>
-            <p class="text-gray-700">Affilliated to BTU Bikaner</p>
+            <p class="text-indigo-500">August 2018 - May 2022</p>
+            <p class="text-indigo-500">Affilliated to BTU Bikaner</p>
           </div>
           <div
-            class="flex flex-col bg-gray-100 rounded-lg p-4"
+            class="flex flex-col bg-slab rounded-lg p-4"
             data-aos="fade-left"
             data-aos-delay="500"
           >
             <h4 class="text-lg font-bold mb-2">12 th Math Science</h4>
-            <p class="text-gray-700 mb-1">
+            <p class="text-indigo-500 mb-1">
               Government Sr Sec School Bargaow, KOTA
             </p>
-            <p class="text-gray-700">Graduated May 2018</p>
+            <p class="text-indigo-500">Graduated May 2018</p>
           </div>
         </div>
       </div>

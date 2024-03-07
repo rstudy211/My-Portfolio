@@ -27,7 +27,7 @@ const SkillList = () => {
     //     {visibleSkills.map((skill, index) => (
     //       <div
     //         key={index}
-    //         className="flex flex-col items-center bg-gray-100 rounded-lg p-4"
+    //         className="flex flex-col items-center bg-iblue6500 bg-transparent rounded-lg p-4"
     //       >
     //         {typeof skill.icon === "string" ? (
     //           <i className={skill.icon + " mb-2"}></i>
@@ -41,7 +41,7 @@ const SkillList = () => {
     //         <p className="text-lg font-bold">{skill.name}</p>
     //       </div>
     //     ))}
-    //     <div class="flex flex-col items-center bg-gray-100 rounded-lg p-4">
+    //     <div class="flex flex-col items-center bg-blue-500 bg-transparent rounded-lg p-4">
     //       <img
     //         src={springIcon}
     //         alt="Spring Boot"
@@ -75,7 +75,7 @@ const SkillList = () => {
     //     {visibleSkills.map((skill, index) => (
     //       <div
     //         key={index}
-    //         className="flex flex-col items-center bg-gray-100 rounded-lg p-4"
+    //         className="flex flex-col items-center bg-iblue6500 bg-transparent rounded-lg p-4"
     //       >
     //         {typeof skill.icon === "string" ? (
     //           <i className={skill.icon + " mb-2"}></i>
@@ -89,7 +89,7 @@ const SkillList = () => {
     //         <p className="text-lg font-bold">{skill.name}</p>
     //       </div>
     //     ))}
-    //     <div className="flex flex-col items-center bg-gray-100 rounded-lg p-4">
+    //     <div className="flex flex-col items-center bg-blue-500 bg-transparent rounded-lg p-4">
     //       <img
     //         src={springIcon}
     //         alt="Spring Boot"
@@ -121,7 +121,7 @@ const SkillList = () => {
     //   )}
     // </div>
     <div id="skills" className="container  mx-auto py-20 px-6">
-      <h3 className="text-2xl xl:text-4xl font-bold text-gray-900 my-8">
+      <h3 className="text-2xl xl:text-4xl font-bold text-indigo-300 my-8">
         My Skills
       </h3>
       <div
@@ -132,7 +132,7 @@ const SkillList = () => {
         {visibleSkills.map((skill, index) => (
           <div
             key={index}
-            className="flex flex-col items-center bg-gray-100 rounded-lg p-4"
+            className="flex flex-col items-center bg-slab rounded-lg p-4"
             data-aos="fade-up"
             data-aos-delay={100 * index}
           >
@@ -149,7 +149,7 @@ const SkillList = () => {
           </div>
         ))}
         <div
-          className="flex flex-col items-center bg-gray-100 rounded-lg p-4"
+          className="flex flex-col items-center bg-slab rounded-lg p-4"
           data-aos="fade-up"
           data-aos-delay={visibleSkills.length * 100}
         >
@@ -165,7 +165,7 @@ const SkillList = () => {
       {skills.length > 6 && (
         <div className="flex justify-center mt-16">
           <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mr-4 flex items-center cursor-pointer transition-all duration-300 ease-in-out"
+            className="focus-btn font-bold py-2 px-4 rounded-lg mr-4 flex items-center cursor-pointer transition-all duration-300 ease-in-out"
             onClick={() => setShowAll(!showAll)}
           >
             {showAll ? (

@@ -21,7 +21,7 @@ function Hero() {
     };
   }, []);
   return (
-    <div className="bg-gray-900 text-center md:text-left" id="hero">
+    <div className="bg-hero text-center md:text-left" id="hero">
       <div className="container mx-auto py-20 px-6 md:py-24 md:flex md:justify-between md:items-center">
         <div className="md:w-1/2">
           <h1 className="text-4xl md:text-5xl font-bold text-white mb-8 ">

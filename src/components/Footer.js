@@ -2,7 +2,7 @@ import React from "react";
 
 function Footer() {
   return (
-    <footer class="bg-gray-900 py-8 overflow-x-hidden hidden md:block xl:block">
+    <footer class="bg-hero py-8 overflow-x-hidden hidden md:block xl:block">
       <div class="container mx-auto px-6">
         <div class="flex justify-between items-center">
           <div>

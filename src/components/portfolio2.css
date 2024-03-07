@@ -41,3 +41,15 @@
 .bgcover {
   background-image: url("../assets/bg.svg");
 }
+
+.bg-hero{
+  background-color: #06002E;
+}
+.bg-slab{
+  @apply
+  bg-indigo-800 text-red-100 bg-opacity-25
+}
+.focus-btn{
+  @apply
+  bg-blue-500 hover:bg-blue-700 text-white
+}

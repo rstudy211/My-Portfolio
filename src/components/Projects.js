@@ -86,13 +86,13 @@ const projects = [
 function Projects() {
   return (
     <div
-      class="bg-gray-100 py-12 px-1 md:px-6"
+      class="bg-hero py-12 px-1 md:px-6"
       id="projects"
       data-aos="fade-up"
       data-aos-offset="300"
     >
       <div class="container pt-16 px-3 pb-5 mx-auto">
-        <h2 class="text-3xl xl:text-5xl 2xl:text-6xl font-bold text-gray-900 mb-14">
+        <h2 class="text-3xl xl:text-5xl 2xl:text-6xl font-bold text-emerald-400 mb-14">
           My Projects
         </h2>
         <div class="grid md:grid-cols-2 pb-20 lg:grid-cols-3 gap-14 md:gap-10">
@@ -100,9 +100,9 @@ function Projects() {
             <div
               data-aos="fade-up"
               data-aos-delay={100 * index}
-              class={`bg-white  rounded-lg  md:pt-5  md:px-5 order-${project.order}   shadow-lg overflow-hidden`}
+              class={`bg-emerald-500 bg-opacity-20  rounded-lg  md:pt-5  md:px-5 order-${project.order}   shadow-lg overflow-hidden`}
             >
-              <div class="relative group/item border-8 rounded-md overflow-hidden  border-slate-800 object-top bg-black  ">
+              <div class="relative group/item border-8 rounded-md overflow-hidden  border-slate-900 object-top bg-black  ">
               <img
                 src={project.imgSrc}
                 alt="Screenshot of Chat-App"
@@ -126,14 +126,14 @@ function Projects() {
               </div>
 
               <div class="p-4">
-                <h3 class="text-xl font-bold text-gray-900 mb-2">
+                <h3 class="text-xl font-bold text-emerald-400 mb-2">
                   {project.name}
                 </h3>
-                <p class="text-gray-700  line-clamp-3">{project.desc}</p>
+                <p class="text-emerald-700  line-clamp-3">{project.desc}</p>
 
                 <a
                   href={project.gitLink}
-                  class="block mt-10 text-right text-gray-400 transition-all duration-500 font-bold hover:text-gray-900"
+                  class="block mt-10 text-right text-green-400 transition-all duration-500 font-bold hover:text-gray-900"
                 >
                   View Source Code →
                 </a>
