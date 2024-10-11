@@ -7,6 +7,7 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 import About from "./About";
 import Hero from "./Hero";
+import { ToastContainer } from "react-toastify";
 
 function Portfolio2() {
   function scrollToSection(sectionId) {
@@ -27,7 +28,7 @@ function Portfolio2() {
   });
 
   return (
-    <body class="bg-gray-[#ffff]   text-center md:text-left font-sans leading-normal tracking-normal">
+    <body class="bg-gray-[#ffff] relative  text-center md:text-left font-sans leading-normal tracking-normal">
       {/* <!-- Nav --> */}
       <Navbar />
       {/* <!-- Hero --> */}
@@ -78,6 +79,15 @@ function Portfolio2() {
       <Contact />
       {/* <!-- Footer --> */}
       <Footer />
+      <ToastContainer 
+      position="top-left" // Adjust the position as needed
+      autoClose={3000}
+      hideProgressBar={false}
+      closeOnClick
+      draggable
+      pauseOnHover
+      theme="dark" // Choose light or dark theme as per your design
+    />
     </body>
   );
 }
