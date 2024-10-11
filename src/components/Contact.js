@@ -25,7 +25,7 @@ function Contact() {
     try {
       const response = await axios.post(
         // `http://localhost:8000/api/send-email`,
-        `http://email-sender-service-gnfi.onrender.com/api/send-email`,
+        `https://email-sender-service-gnfi.onrender.com/api/send-email`,
         formData
       );
       if (response.status === 200) {
