@@ -8,6 +8,7 @@ import Footer from "./Footer";
 import About from "./About";
 import Hero from "./Hero";
 import { ToastContainer } from "react-toastify";
+import Education from "./Education";
 
 function Portfolio2() {
   function scrollToSection(sectionId) {
@@ -36,7 +37,7 @@ function Portfolio2() {
       {/* <!-- About --> */}
 
       <About />
-      <div
+      {/* <div
         id="education"
         className="container mx-auto py-20 pb-5 px-6"
         data-aos="fade-down"
@@ -70,7 +71,8 @@ function Portfolio2() {
             <p class="text-gray-700">Graduated May 2018</p>
           </div>
         </div>
-      </div>
+      </div> */}
+      <Education/>
       {/* Skills */}
       <SkillList />
       {/* <!-- Projects --> */}

@@ -1,106 +1,89 @@
-import { useState } from "react";
-// import springIcon from "../assets/spring-boot.svg";
-// import ansibleIcon from "../assets/icons8-ansible.svg";
-import skills from "../assets/data/skills_data";
+import React, { useState } from 'react';
+import { ChevronDown, ChevronUp } from 'lucide-react';
+import skills from '../assets/data/skills_data'; // Assuming you have your skills data here
 
-// console.log('first', skills);
-// const skills =[
-//   {name:"Spring Boot", src : springIcon},
-//   {name:"Ansible", src:ansibleIcon}
-// ]
 const SkillList = () => {
   const [showAll, setShowAll] = useState(false);
   const visibleSkills = showAll ? skills : skills.slice(0, 8);
 
   return (
-    <div id="skills" className="container  mx-auto py-20 px-6">
-      <h3 className="text-2xl xl:text-4xl font-bold text-gray-900 my-8">
-        My Skills
-      </h3>
-      <div
-        className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-4 xl:gap-20"
-        data-aos="fade-up"
-        data-aos-duration="1000"
-      >
-        {visibleSkills.map((skill, index) => (
-          // <div
-          //   key={index}
-          //   className="flex flex-col items-center bg-gray-100 rounded-lg p-4"
-          //   data-aos="fade-up"
-          //   data-aos-delay={100 * index}
-          // >
-          //   {typeof skill.icon === "string" ? (
-          //     <i className={skill.icon + " mb-2"}></i>
-          //   ) : (
-          //     <img
-          //       src={skill.icon}
-          //       alt={skill.name}
-          //       className={skill.className + " mb-2"}
-          //     />
-          //   )}
-          //   <p className="text-lg font-bold">{skill.name}</p>
-          // </div>
-
-          <div
-            className="flex flex-col items-center bg-gray-100 rounded-lg p-4"
-            data-aos="fade-up"
-            data-aos-delay={visibleSkills.length * 100}
-          >
-            <img
-              src={skill.src}
-              alt="Spring Boot"
-              className="w-16 h-16 spring mb-2"
-            />
-            <p className="text-lg font-bold">{skill.name}</p>
+    <section id="skills" className="relative bg-slate-900 text-slate-100 py-24">
+      <div className="container mx-auto px-6">
+        <div className="max-w-6xl mx-auto">
+          {/* Header */}
+          <div className="text-center mb-16" data-aos="fade-up">
+            <span className="inline-block p-1.5 px-3 mb-6 rounded-full text-xs font-semibold tracking-wider uppercase bg-gradient-to-r from-teal-500/10 to-teal-500/10 text-teal-400 border border-teal-500/20">
+              Technical Expertise
+            </span>
+            <h2 className="text-4xl font-bold text-white mt-2 mb-4">
+              Skills & Technologies
+            </h2>
+            <p className="text-slate-300 text-lg">
+              Tools and technologies I specialize in
+            </p>
           </div>
-        ))}
-        {/* <div
-          className="flex flex-col items-center bg-gray-100 rounded-lg p-4"
-          data-aos="fade-up"
-          data-aos-delay={visibleSkills.length * 100}
-        >
-          <img
-            src={springIcon}
-            alt="Spring Boot"
-            className="w-16 h-16 spring mb-2"
-          />
-          <p className="text-lg font-bold">Spring Boot</p>
-        </div> */}
-        {/* <div
-          className="flex flex-col items-center bg-gray-100 rounded-lg p-4"
-          data-aos="fade-up"
-          data-aos-delay={visibleSkills.length * 100}
-        >
-          <img
-            src={ansibleIcon}
-            alt="ansible"
-            className="w-16 h-16 spring mb-2"
-          />
-          <p className="text-lg font-bold">Ansible</p>
-        </div> */}
-      </div>
 
-      {skills.length > 6 && (
-        <div className="flex justify-center mt-16">
-          <button
-            className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-lg mr-4 flex items-center cursor-pointer transition-all duration-300 ease-in-out"
-            onClick={() => setShowAll(!showAll)}
-          >
-            {showAll ? (
-              <>
-                Show Less{" "}
-                <i className="fas animate-pulse fa-chevron-up ml-2"></i>
-              </>
-            ) : (
-              <>
-                Show More{" "}
-                <i className="fas animate-pulse fa-chevron-down ml-2"></i>
-              </>
-            )}
-          </button>
+          {/* Skills Grid */}
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-6 md:gap-8">
+            {visibleSkills.map((skill, index) => (
+              <div
+                key={index}
+                className="group relative"
+                data-aos="fade-up"
+                data-aos-delay={index * 100}
+              >
+                <div className="bg-slate-800 p-6 rounded-xl
+                               shadow-sm
+                               transition duration-300 ease-in-out
+                               hover:shadow-lg hover:bg-slate-700
+                               hover:scale-105 transform">
+                  <div className="flex flex-col items-center space-y-4">
+                    {/* Icon Container */}
+                    <div className="p-4 rounded-lg bg-white
+                                  transition duration-300
+                                  group-hover:bg-teal-500 group-hover:scale-110">
+                      <img
+                        src={skill.src}
+                        alt={skill.name}
+                        className="w-12 h-12 object-contain
+                                  filter brightness-125 saturate-200
+                                  transition duration-300"
+                      />
+                    </div>
+
+                    {/* Skill Name */}
+                    <h3 className="text-white text-lg font-medium text-center">
+                      {skill.name}
+                    </h3>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          {/* Show More/Less Button */}
+          {skills.length > 8 && (
+            <div className="flex justify-center mt-12">
+              <button
+                onClick={() => setShowAll(!showAll)}
+                className="inline-flex items-center space-x-2
+                         px-6 py-3 rounded-lg
+                         bg-blue-600 hover:bg-blue-700
+                         text-white font-medium
+                         transition duration-300"
+              >
+                <span>{showAll ? 'Show Less' : 'Show More'}</span>
+                {showAll ? (
+                  <ChevronUp className="w-4 h-4" />
+                ) : (
+                  <ChevronDown className="w-4 h-4" />
+                )}
+              </button>
+            </div>
+          )}
         </div>
-      )}
-    </div>
+      </div>
+    </section>
   );
 };
 
