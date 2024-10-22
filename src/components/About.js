@@ -43,11 +43,11 @@ function About() {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12" data-aos="fade-up" data-aos-delay="700">
               <div className="bg-gray-800 p-6 rounded-lg">
-                <h4 className="text-3xl font-bold text-purple-400">5+</h4>
+                <h4 className="text-3xl font-bold text-purple-400">2+</h4>
                 <p className="text-gray-300">Years Experience</p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg">
-                <h4 className="text-3xl font-bold text-blue-400">20+</h4>
+                <h4 className="text-3xl font-bold text-blue-400">25+</h4>
                 <p className="text-gray-300">Projects Completed</p>
               </div>
               <div className="bg-gray-800 p-6 rounded-lg">
