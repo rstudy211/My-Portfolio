@@ -151,7 +151,7 @@ function Contact() {
         <div className="absolute top-1/3 right-1/4 w-64 h-64 bg-blue-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000"></div>
         <div className="absolute bottom-1/4 left-1/3 w-64 h-64 bg-green-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000"></div>
       </div>
-      <ToastContainer containerId="emailToast" limit={1} />
+      {/* <ToastContainer containerId="emailToast" limit={1} /> */}
     </div>
   );
 }
